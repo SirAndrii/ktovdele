@@ -1,4 +1,10 @@
-  function createCalendar(elem, year, month){
+/**
+   * @parama {string} elem , the html element where the calentar will be appended
+   * @parama {number} year
+   * @parama {string or number} month, string must be in latin, number 1-12
+   */
+
+function createCalendar(elem, year, month){
       let start=document.querySelector(elem);
             
       let date =  (typeof(month) == 'string') ? new Date(`'${year} ${month}'`) : new Date (year,month-1) ;
